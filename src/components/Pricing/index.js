@@ -29,11 +29,11 @@ class Pricing extends Component{
                         </div>
                     </div>
                     <div className='billing-section'>
-                        <p className='toggle-txt'>Monthly Billing</p>
+                        <p className='billing-txt'>Monthly Billing</p>
                         <label className='switch'>
-                          <Switch checkedIcon="" uncheckedIcon="" onColor="#2ef2aa" onChange={this.handleChange} checked={this.state.checked} />
+                          <Switch checkedIcon="" width={50} uncheckedIcon="" onColor="#2ef2aa" onChange={this.handleChange} checked={this.state.checked} />
                         </label>
-                        <p className='toggle-txt'>Yearly Billing</p>
+                        <p className='billing-txt'>Yearly Billing</p>
                         <p className='discount'>25% discount</p>
                     </div>
                     <hr className='line' />
