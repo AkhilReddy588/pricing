@@ -106,4 +106,7 @@
     .bottom-section{
         flex-direction: column;
     }
+    .pricing-container{
+        padding: 20px;
+    }
 }
