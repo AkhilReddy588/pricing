@@ -116,9 +116,14 @@
         padding: 20px;
     }
     .pricing-content{
-        width: 300px;
+        width: 250px;
+        padding: 20px;
     }
     .billing-txt{
+        font-size: 12px;
+    }
+    .discount{
+        padding: 5px;
         font-size: 12px;
     }
 }
