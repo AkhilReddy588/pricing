@@ -17,8 +17,12 @@
     display: flex;
     flex-direction: column;
 }
+.heading{
+    text-align: center;
+}
 .top-para{
     color: hsl(225, 20%, 60%);
+    text-align: center;
 }
 .amount-section{
     display: flex;
