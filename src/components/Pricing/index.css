@@ -14,6 +14,8 @@
     margin-top: 30px;
     border-radius: 10px;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .top-para{
     color: hsl(225, 20%, 60%);
@@ -104,6 +106,18 @@
     width: 160px;
     cursor: pointer;
 }
+.range-slider{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+}
+@media screen and (min-width: 576px) {
+    .mobile{
+        display: none;
+    }    
+}
+
 
 @media screen and (max-width: 576px){
     .amount-section{
@@ -127,5 +141,8 @@
         padding: 5px;
         font-size: 12px;
         text-align: center;
+    }
+    .desktop{
+        display: none;
     }
 }
