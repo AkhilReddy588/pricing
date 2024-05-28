@@ -5,12 +5,27 @@ import { FaCheck } from "react-icons/fa"
 import './index.css'
 
 class Pricing extends Component{
-    state = {rangeValue: 50}
+    constructor() {
+        super();
+        this.state = { checked: false };
+        this.handleChange = this.handleChange.bind(this);
+      }
 
-    onChangeSlider = event => this.setState({rangeValue: event.target.value})
+      state = {rangeValue: 50}
+
+      componentDidMount(){
+        this.setState({rangeValue: 50})
+      }
+
+      onChangeSlider = event => this.setState({rangeValue: event.target.value})
+    
+      handleChange(checked) {
+        this.setState({ checked });
+      }
+
 
     render(){
-        const {rangeValue} = this.state
+      const {rangeValue} = this.state
         return (
             <div className='pricing-container'>
                 <h1 className='heading'>Simple, traffic-based pricing</h1>
@@ -20,7 +35,7 @@ class Pricing extends Component{
                         <p className='page-views'>100K PAGEVIEWS</p>
                         <input type='range' min={0} max={100} value={rangeValue} onChange={this.onChangeSlider} className='range-slider mobile' />
                         <div className='rate'>
-                          <h1 className='amount'>${rangeValue}</h1>
+                          <h1 className='amount'>${rangeValue}.00</h1>
                           <p className='span-txt'>/month</p>
                         </div>
                     </div>
