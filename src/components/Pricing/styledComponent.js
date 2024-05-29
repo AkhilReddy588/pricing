@@ -40,7 +40,7 @@ export const ThemeBtn = styled.button`
   cursor: pointer;
   @media screen and (max-width: 576px){
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 `
 export const Amount = styled.h1`
