@@ -22,7 +22,6 @@ export const PricingContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding-bottom: 100px;
   @media screen and (max-width: 576px){
     padding: 20px;
@@ -40,7 +39,8 @@ export const ThemeBtn = styled.button`
   margin-top: 40px;
   cursor: pointer;
   @media screen and (max-width: 576px){
-    margin-right: 10px
+    margin-right: 10px;
+    margin-top: 20px;
   }
 `
 export const Amount = styled.h1`
