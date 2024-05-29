@@ -20,9 +20,9 @@ export const PricingContainer = styled.div`
   background-color: ${props => props.theme===true ? '#000000' : 'hsl(230, 100%, 99%)'};
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 100px;
   @media screen and (max-width: 576px){
     padding: 20px;
@@ -36,8 +36,8 @@ export const ThemeBtn = styled.button`
   border-radius: 10px;
   padding: 10px;
   margin-left: auto;
-  margin-top: 100px;
   margin-right: 50px;
+  margin-top: 40px;
   cursor: pointer;
   @media screen and (max-width: 576px){
     margin-right: 10px
