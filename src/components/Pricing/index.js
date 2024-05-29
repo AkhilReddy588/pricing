@@ -2,6 +2,7 @@ import {Component} from 'react'
 import React from "react"
 import Switch from "react-switch"
 import { FaCheck } from "react-icons/fa"
+import {PricingContent, PricingContainer, ThemeBtn, Amount} from './styledComponent'
 import './index.css'
 
 class Pricing extends Component{
@@ -11,7 +12,7 @@ class Pricing extends Component{
         this.handleChange = this.handleChange.bind(this);
       }
 
-      state = {rangeValue: 50}
+      state = {rangeValue: 50, isDarkTheme: false}
 
       componentDidMount(){
         this.setState({rangeValue: 50})
@@ -22,20 +23,31 @@ class Pricing extends Component{
       handleChange(checked) {
         this.setState({ checked });
       }
+      
+      changeTheme = () => {
+        this.setState({ isDarkTheme: !this.state.isDarkTheme });
+      }
 
 
     render(){
-      const {rangeValue} = this.state
+      const {rangeValue, isDarkTheme} = this.state
+      const themeLogoUrl = isDarkTheme ? 
+                   'https://assets.ccbp.in/frontend/react-js/light-theme-img.png' :
+                  'https://assets.ccbp.in/frontend/react-js/dark-theme-img.png' 
+      const heading = isDarkTheme ? 'heading-dark' : 'heading-light'         
         return (
-            <div className='pricing-container'>
-                <h1 className='heading'>Simple, traffic-based pricing</h1>
+            <PricingContainer theme={isDarkTheme} >
+                <ThemeBtn theme={isDarkTheme} onClick={this.changeTheme} >
+                  <img src={themeLogoUrl} alt="theme" className='theme-logo' />
+                </ThemeBtn>
+                <h1 className={`${heading}`}>Simple, traffic-based pricing</h1>
                 <p className='top-para'>Sign-Up for our 30-day trail. No credit card required</p>
-                <div className='pricing-content'>
+                <PricingContent theme={isDarkTheme} >
                     <div className='amount-section'>
                         <p className='page-views'>100K PAGEVIEWS</p>
                         <input type='range' min={0} max={100} value={rangeValue} onChange={this.onChangeSlider} className='range-slider mobile' />
                         <div className='rate'>
-                          <h1 className='amount'>${rangeValue}.00</h1>
+                          <Amount theme={isDarkTheme}>${rangeValue}.00</Amount>
                           <p className='span-txt'>/month</p>
                         </div>
                     </div>
@@ -66,8 +78,8 @@ class Pricing extends Component{
                         </ul>
                         <button className='trail-btn'>Start my trail</button>
                     </div>
-                </div>
-            </div>
+                </PricingContent>
+            </PricingContainer>
         )
     }
 }
