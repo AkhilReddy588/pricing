@@ -18,7 +18,7 @@ export const PricingContent = styled.div`
 
 export const PricingContainer = styled.div`
   background-color: ${props => props.theme===true ? '#000000' : 'hsl(230, 100%, 99%)'};
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,6 +39,9 @@ export const ThemeBtn = styled.button`
   margin-top: 100px;
   margin-right: 50px;
   cursor: pointer;
+  @media screen and (max-width: 576px){
+    margin-right: 10px
+  }
 `
 export const Amount = styled.h1`
   color: ${props => props.theme===true ? '#ffffff' : 'hsl(227, 35%, 25%)'};

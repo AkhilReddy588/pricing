@@ -139,13 +139,10 @@
     .bottom-section{
         flex-direction: column;
     }
-    .pricing-container{
-        padding: 20px;
+    .theme-logo{
+        width: 20px;
     }
-    .pricing-content{
-        width: 250px;
-        padding: 20px;
-    }
+    
     .billing-txt{
         font-size: 12px;
     }
