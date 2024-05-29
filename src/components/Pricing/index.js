@@ -10,13 +10,16 @@ class Pricing extends Component{
         super();
         this.state = { checked: false };
         this.handleChange = this.handleChange.bind(this);
+        this.changeTheme = this.changeTheme.bind(this);
+        this.onChangeSlider = this.onChangeSlider.bind(this);
       }
 
       state = {rangeValue: 50, isDarkTheme: false}
 
-      componentDidMount(){
-        this.setState({rangeValue: 50})
+      componentDidMount() {
+        this.setState({ rangeValue: 50 });
       }
+      
 
       onChangeSlider = event => this.setState({rangeValue: event.target.value})
     

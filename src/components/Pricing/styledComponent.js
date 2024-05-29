@@ -10,6 +10,10 @@ export const PricingContent = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  @media screen and (max-width: 576px){
+    width: 250px;
+    padding: 20px;
+  }
 `
 
 export const PricingContainer = styled.div`
@@ -20,13 +24,16 @@ export const PricingContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
+  @media screen and (max-width: 576px){
+    padding: 20px;
+  }
 `
 
 export const ThemeBtn = styled.button`
   background-color: ${props => props.theme===true ? '#272727' : '#ffffff'};
-  border-type: solid;
+  border-style: solid;
   border-color: ${props => props.theme===true ? '#dcdcdc' : '#272727'};
-  border-radius: 10px
+  border-radius: 10px;
   padding: 10px;
   margin-left: auto;
   margin-top: 100px;
